@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #COMPONENT=Frontend
-source common.sh
+source /components/common.sh
 
 
 INFO "Setup frontend started"
