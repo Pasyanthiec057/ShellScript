@@ -33,3 +33,11 @@ case $? in
     echo -e "\e[1;31m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $COMPONENT HTDOCS download failed"
     ;;
 esac
+
+cd /usr/share/nginx/html
+rm -rf *
+echo "$?"
+# unzip /tmp/frontend.zip
+# mv static/* .
+# rm -rf static README.md
+# mv localhost.conf /etc/nginx/default.d/roboshop.conf

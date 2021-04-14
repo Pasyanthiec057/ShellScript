@@ -36,10 +36,3 @@ CURL(){
   curl -s -L -o /tmp/"$COMPONENT".zip "$1" &>> $LOG_OUT
 }
 
-cd /usr/share/nginx/html
-rm -rf *
-echo "$?"
-# unzip /tmp/frontend.zip
-# mv static/* .
-# rm -rf static README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
