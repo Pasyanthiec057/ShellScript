@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#COMPONENT=Frontend
+COMPONENT=Mongo
 
 source  ./components/common.sh
 

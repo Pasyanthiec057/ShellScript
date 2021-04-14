@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#COMPONENT=Frontend
+COMPONENT=Frontend
 source ./components/common.sh
 
 
