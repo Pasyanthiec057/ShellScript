@@ -1,5 +1,5 @@
 #! /bin/bash
 
-echo "hi this is hello world"
+echo  -e "hi\n\nthis is hello \nworld"
 echo 'Good morning'
-echo Bye
+echo \nBye
