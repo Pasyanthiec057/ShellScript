@@ -26,8 +26,6 @@ SUCC(){
       #echo -e "\e[4;1;31m $1 failed \e[0m"
   esac
 
-
-
 }
 
 FAIL(){
