@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #COMPONENT=Frontend
-source  ~/components/common.sh
+source  E:\Repos\ShellScript\Roboshop-Project\components/common.sh
 
 
 INFO "Setup mongo started"
