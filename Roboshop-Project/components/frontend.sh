@@ -11,3 +11,16 @@ yum install nginx -y &>> $LOG_OUT
 
 SUCC "Installed Frontend"
 
+systemctl enable nginx
+systemctl start nginx
+
+case $? in
+  0)
+    echo -e "\e[1;32m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $COMPONENT service started"
+    ;;
+  *)
+    echo -e "\e[1;32m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $COMPONENT service failed"
+    ;;
+esac
+#SERVICE "$COMPONENT"
+
