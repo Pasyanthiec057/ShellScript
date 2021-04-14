@@ -1,4 +1,4 @@
-Frontend:
-	@echo Installing Frontend
-Mongo:
-	@echo Installing Mongo
+Echo:
+	@sh  Echo.sh
+Vars:
+	@sh Variables.sh
