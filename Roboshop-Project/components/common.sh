@@ -9,15 +9,24 @@ case $USER_ID in
    ;;
  esac
 
-
-
+ LOG_OUT=/tmp/roboshop.log
+ rm -f LOG_OUT
 
 INFO(){
   echo -e "\e[1;32m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $1"
 }
 
 SUCC(){
-  echo -e "\e[1;32m[SUCC] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $1"
+  case $? in
+    0)
+      echo -e "\e[1;32m[SUCC] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $1"
+      ;;
+    *)
+      echo -e "\e[4;1;31m $1 failed \e[0m"
+  esac
+
+
+
 }
 
 FAIL(){
