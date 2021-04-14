@@ -36,3 +36,6 @@ CURL(){
   curl -s -L -o /tmp/"$COMPONENT".zip "$1" &>> $LOG_OUT
 }
 
+UNZIP(){
+  unzip "$1"
+}

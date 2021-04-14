@@ -36,8 +36,17 @@ esac
 
 cd /usr/share/nginx/html
 rm -rf *
-echo "$?"
-# unzip /tmp/frontend.zip
-# mv static/* .
-# rm -rf static README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
+
+UNZIP "/tmp/$COMPONENT.zip"
+mv static/* .
+rm -rf static README.md
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+case $? in
+  0)
+    echo -e "\e[1;32m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $COMPONENT default location moved successfully"
+    ;;
+  *)
+    echo -e "\e[1;31m[INFO] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $COMPONENT default location move failed"
+    ;;
+esac
+systemctl restart nginx
