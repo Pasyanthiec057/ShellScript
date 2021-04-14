@@ -10,4 +10,4 @@ yum install epel-release
 yum install nginx -y
 
 SUCC "Installed Frontend"
-FAIL "Installing Frontend failed"
+

@@ -22,7 +22,8 @@ SUCC(){
       echo -e "\e[1;32m[SUCC] \e[1;34m[$COMPONENT] \e[1;33m[$(date '+%F %T')]\e[0m $1"
       ;;
     *)
-      echo -e "\e[4;1;31m $1 failed \e[0m"
+      FAIL "Installing Frontend failed"
+      #echo -e "\e[4;1;31m $1 failed \e[0m"
   esac
 
 
