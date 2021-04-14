@@ -11,8 +11,8 @@ yum install nginx -y &>> $LOG_OUT
 
 SUCC "Installed Frontend"
 
-systemctl enable nginx
-systemctl start nginx
+systemctl enable nginx &>> $LOG_OUT
+systemctl start nginx &>> $LOG_OUT
 
 case $? in
   0)
