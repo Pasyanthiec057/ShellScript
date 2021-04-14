@@ -4,7 +4,7 @@ case $USER_ID in
    true
    ;;
  *)
-   echo "You need to be login as root to perform this operation"
+   echo "\e[4;1;31mYou need to be login as root to perform this operation\e[0m"
    exit 1
    ;;
  esac
