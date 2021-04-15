@@ -46,5 +46,12 @@ RESULT(){
       ;;
   esac
 
+}
+
+NODEJS_INSTALL(){
+  yum install nodejs make gcc-c++ -y &>> $LOG_OUT
+}
+USERADD(){
+  useradd roboshop &>> $LOG_OUT
 
 }

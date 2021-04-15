@@ -6,3 +6,6 @@ frontend: common
 
 mongo: common
 	@sh components/mongo.sh
+
+mongo: common
+	@sh components/catalogue.sh
