@@ -30,9 +30,9 @@ RESULT $? "$COMPONENT directory creation"
 cd $COMPONENT
 UNZIP "/tmp/$COMPONENT.zip"
 RESULT $? "Unzip files"
-apt-get install -y npm
-RESULT $? "npm package installation"
+sudo yum install epel-release -y
 npm install --unsafe-perm
+RESULT $? "npm package installation"
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
 
 sed -i -e 's/MONGO_DNSNAME/172.31.47.156/' /home/roboshop/catalogue/systemd.service
