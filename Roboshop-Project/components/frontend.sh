@@ -39,6 +39,7 @@ cd /usr/share/nginx/html
 rm -rf *
 
 UNZIP "/tmp/$COMPONENT.zip"
+RESULT $? "Unzip files"
 mv static/* .
 rm -rf static README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
