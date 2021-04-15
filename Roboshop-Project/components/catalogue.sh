@@ -34,7 +34,7 @@ yum install npm -y
 npm install --unsafe-perm
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
 
-sed -i -e 's/MONGO_DNSNAME/172.31.47.156' /home/roboshop/catalogue/systemd.service
+sed -i -e 's/MONGO_DNSNAME/172.31.47.156/' /home/roboshop/catalogue/systemd.service
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 RESULT $? "Daemon reload"
