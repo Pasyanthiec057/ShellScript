@@ -34,8 +34,8 @@ RESULT $? "download database schema"
 UNZIP "/tmp/$COMPONENT.zip"
 RESULT $? "Unzip files"
 
-mongo < catalogue.js
-mongo < users.js
+mongo < catalogue.js &>> "$LOG_OUT"
+mongo < users.js &>> "$LOG_OUT"
 RESULT $? "Schema load"
 #SUCC "Installed mongo"
 #FAIL "Installing mongo failed"
