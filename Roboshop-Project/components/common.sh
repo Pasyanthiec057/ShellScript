@@ -32,7 +32,7 @@ CURL(){
 
 UNZIP(){
   yum install unzip -y &>> "$LOG_OUT"
-  unzip "$1"
+  unzip "$1" -A
 }
 
 RESULT(){
