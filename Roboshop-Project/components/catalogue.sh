@@ -1,6 +1,6 @@
 #! /bin/bash
 
-COMPONENT=catalogue
+COMPONENT=Catalogue
 source ./components/common.sh
 
 INFO "Installing nodejs"
@@ -35,7 +35,7 @@ npm install --unsafe-perm
 RESULT $? "npm package installation"
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
 
-sed -i  's/MONGO_DNSNAME/172.31.47.156/' /home/roboshop/catalogue/systemd.service
+sed -i  's/MONGO_DNSNAME/172.31.47.156/' /home/roboshop/Catalogue/systemd.service
 mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 RESULT $? "Daemon reload"
