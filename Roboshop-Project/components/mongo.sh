@@ -22,7 +22,7 @@ systemctl enable mongod
 systemctl start mongod
 RESULT $? "mongo service start"
 
-sed 's/127.0.0.1/0.0.0.0/g'  /etc/mongod.conf
+sed 's/127.0.0.1/0.0.0.0/g'  /etc/mongod.conf &>> "$LOG_OUT"
 RESULT $? "IP address in the configuration file change"
 
 systemctl restart mongod
