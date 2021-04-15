@@ -13,6 +13,7 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mongodb.repo
 
+RESULT $? "Set up Mongo"
 INFO "Installing mongo"
 yum install -y mongodb-org  &>> "$LOG_FILE"
 RESULT $? "mongo db installation"
