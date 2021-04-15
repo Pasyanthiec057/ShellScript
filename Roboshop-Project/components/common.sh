@@ -40,3 +40,17 @@ UNZIP(){
   yum install unzip -y &>> "$LOG_OUT"
   unzip "$1" &>> "$LOG_OUT"
 }
+
+RESULT(){
+  case $? in
+    0)
+      SUCC "$2"
+      ;;
+    *)
+      FAIL "$2"
+
+      ;;
+  esac
+
+
+}
