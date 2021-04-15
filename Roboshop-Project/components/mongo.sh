@@ -15,7 +15,7 @@ gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mong
 
 RESULT $? "Set up Mongo"
 INFO "Installing mongo"
-yum install -y mongodb-org  &>> "$LOG_FILE"
+yum install -y mongodb-org  &>> "$LOG_OUT"
 RESULT $? "mongo db installation"
 
 systemctl enable mongod
