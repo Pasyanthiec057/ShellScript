@@ -30,7 +30,7 @@ RESULT $? "$COMPONENT directory creation"
 cd $COMPONENT
 UNZIP "/tmp/$COMPONENT.zip"
 RESULT $? "Unzip files"
-sudo yum install epel-release -y
+yum install npm
 npm install --unsafe-perm
 RESULT $? "npm package installation"
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
