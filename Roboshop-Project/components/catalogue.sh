@@ -30,7 +30,8 @@ RESULT $? "$COMPONENT directory creation"
 cd $COMPONENT
 UNZIP "/tmp/$COMPONENT.zip"
 RESULT $? "Unzip files"
-yum install npm -y
+yum install -y npm
+RESULT $? "npm package installation"
 npm install --unsafe-perm
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
 
