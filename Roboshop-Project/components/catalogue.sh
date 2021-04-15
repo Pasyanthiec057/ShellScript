@@ -36,7 +36,7 @@ RESULT $? "npm package installation"
 chown roboshop:roboshop /home/roboshop/$COMPONENT -R
 
 sed -i  's/MONGO_DNSNAME/172.31.47.156/' /home/roboshop/Catalogue/systemd.service
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+mv /home/roboshop/$COMPONENT/systemd.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 RESULT $? "Daemon reload"
 systemctl enable catalogue &>> "$LOG_OUT"
