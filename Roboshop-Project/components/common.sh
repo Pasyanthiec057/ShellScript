@@ -31,8 +31,8 @@ CURL(){
 }
 
 UNZIP(){
-  yum install unzip -y
-  unzip "$1"
+  yum install unzip -y &>> "$LOG_OUT"
+  unzip "$1" -y &>> "$LOG_OUT"
 }
 
 RESULT(){
